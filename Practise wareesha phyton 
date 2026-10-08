@@ -1,0 +1,248 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOFR0YlWeO/NSKLM5txqDsB",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mmunibaferoz-ctrl/Phyton-practise/blob/main/Practise%20wareesha%20phyton%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Phython practise wareesha"
+      ],
+      "metadata": {
+        "id": "ge7ZPq7-tq9g"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#task1: cinema ticket price\n",
+        "name = input(\"enter your name: \")\n",
+        "age = int(input(\"enter your age: \"))\n",
+        "\n",
+        "if age < 5 or age > 100:\n",
+        "    price = \"Free\"\n",
+        "elif age >= 5 and age <= 12:\n",
+        "    price = 300\n",
+        "elif age >= 13 and age <= 59:\n",
+        "    price = 700\n",
+        "else:  # age 60 to 100\n",
+        "    price = 400\n",
+        "\n",
+        "print(\"\\nCustomer Name:\", name)\n",
+        "print(\"Ticket Price:\", price)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2KMg61EPtyPX",
+        "outputId": "7965a7be-72df-4da7-95df-f4b5593145c0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter your name: Wareesha \n",
+            "enter your age: 23 \n",
+            "\n",
+            "Customer Name: Wareesha \n",
+            "Ticket Price: 700\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#task 2:Temperature converter\n",
+        "Celsius = float(input(\"enter temperature in celcius:\"))\n",
+        "\n",
+        "#Formula\n",
+        "Fahrenheit = (Celsius *9/5) + 32\n",
+        "\n",
+        "print(Celsius, \"°C =\",Fahrenheit,'°F')\n",
+        "\n",
+        "#Weather message\n",
+        "if Celsius <10:\n",
+        "  print(\"weather: very cold\")\n",
+        "elif Celsius <= 19:\n",
+        "    print(\"weather: cold\")\n",
+        "elif Celsius <= 29:\n",
+        "    print(\"weather: Normal\")\n",
+        "else:\n",
+        "   print(\"weather: Hot\")"
+      ],
+      "metadata": {
+        "id": "cj8V6Q8Auh-I",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c62b0ed2-ec5b-4e79-f3d6-765959687a21"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter temperature in celcius:14\n",
+            "14.0 °C = 57.2 °F\n",
+            "weather: cold\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#task 3:MOBILE RECHARGE WITH TAX\n",
+        "Mobile =(input(\"Enter your mobile number:\"))\n",
+        "amount = float(input(\"Enter recharge amount:\"))\n",
+        "\n",
+        "#Formula\n",
+        "Tax = amount * 3 / 100\n",
+        "Final_Balance = amount - Tax\n",
+        "\n",
+        "\n",
+        "print(\"mobile number:\", Mobile)\n",
+        "print(\"Recharge Amount:Rs.\", amount)\n",
+        "print(\"Tax 3%:\", Tax)\n",
+        "print(\"Final Balance you will get: Rs.\",Final_Balance)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0GXWU8LR2Hk0",
+        "outputId": "eb1389a9-5884-4fea-ede9-dad7fe09eec8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your mobile number:03158725908\n",
+            "Enter recharge amount:700\n",
+            "mobile number: 03158725908\n",
+            "Recharge Amount:Rs. 700.0\n",
+            "Tax 3%: 21.0\n",
+            "Final Balance you will get: Rs. 679.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#Task 4: weekly step trackers\n",
+        "\n",
+        "total_steps = 0\n",
+        "\n",
+        "for day in range(7):\n",
+        "    user_input = int(input(f\"enter your steps for day {day + 1}: \"))\n",
+        "    total_steps += user_input\n",
+        "\n",
+        "daily_avg = total_steps / 7\n",
+        "\n",
+        "print(\"Total steps:\", total_steps)\n",
+        "print(\"Daily average steps:\", daily_avg)"
+      ],
+      "metadata": {
+        "id": "srIWqfdyY5IB",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a37d43d8-5e25-44a3-fdd1-f6a1d2fd35be"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter your steps for day 1: 22000\n",
+            "enter your steps for day 2: 30000\n",
+            "enter your steps for day 3: 40000\n",
+            "enter your steps for day 4: 50000\n",
+            "enter your steps for day 5: 60000\n",
+            "enter your steps for day 6: 70000\n",
+            "enter your steps for day 7: 80000\n",
+            "Total steps: 352000\n",
+            "Daily average steps: 50285.71428571428\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#task 5 Pin checker\n",
+        "secret_pin = 2580\n",
+        "attempts = 3\n",
+        "\n",
+        "for i in range(attempts):\n",
+        "    user_pin = int(input(\"Enter PIN: \"))\n",
+        "\n",
+        "    if user_pin == secret_pin:\n",
+        "        print(\"Access Granted\")\n",
+        "        break\n",
+        "\n",
+        "    else:\n",
+        "        remaining = attempts - i - 1\n",
+        "        if remaining > 0:\n",
+        "            print(f\"Wrong PIN! {remaining} attempts remaining\")\n",
+        "        else:\n",
+        "            print(\"Account Blocked\")"
+      ],
+      "metadata": {
+        "id": "2kCJILWafc6o",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2e8d1806-dfc6-4cd1-ac63-2a300d415cb3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter PIN: 23450\n",
+            "Wrong PIN! 2 attempts remaining\n",
+            "Enter PIN: 22222\n",
+            "Wrong PIN! 1 attempts remaining\n",
+            "Enter PIN: 123456\n",
+            "Account Blocked\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
